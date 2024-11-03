@@ -18,7 +18,6 @@ Section Styles
     }
     .title, .subtitle {
         font-family: 'Open Sans', sans-serif;
-
     }
     .subtitle {
         &.is-muted {
@@ -33,7 +32,6 @@ Section Styles
     margin: 0 auto;
     .title, .subtitle {
         font-family: 'Open Sans', sans-serif;
-
     }
     .subtitle {
         &.is-muted {
@@ -58,28 +56,182 @@ Section Styles
     padding: 60px 0;
 }
 
-
 //Pulled image
 img.pushed-image {
     margin-top: -5vh;
+    max-width: 600px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    @media screen and (max-width: 768px) {
+        max-width: 400px;
+        margin-top: -3vh;
+    }
+
+    @media screen and (max-width: 480px) {
+        max-width: 300px;
+    }
 }
 
 //Icon box
 .media.icon-box {
     border-top: none !important;
+    margin-bottom: 2rem;
+
     .media-content .content p {
         span {
             display: block;
         }
+
         .icon-box-title {
             color: $blue-grey;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: 600;
+            margin-bottom: 0.5rem;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1.2rem;
+            }
         }
+
         .icon-box-text {
             color: $title-grey;
             font-size: 1rem;
             font-weight: 400;
+            line-height: 1.5;
+        }
+    }
+
+    .media-left {
+        margin-right: 1rem;
+
+        .image {
+            width: 60px;
+            height: 60px;
+
+            @media screen and (max-width: 768px) {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+// Section specific styles
+#section2 {
+    .columns {
+        margin-top: 2rem;
+    }
+}
+
+#section3 {
+    .title.is-2 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+
+        @media screen and (max-width: 768px) {
+            font-size: 1.8rem;
+        }
+    }
+
+    .subtitle.is-5 {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .button.cta {
+        padding: 1.5rem 3rem;
+        height: auto;
+
+        @media screen and (max-width: 768px) {
+            padding: 1.25rem 2.5rem;
+        }
+    }
+
+    .mt-20 {
+        margin-top: 2rem;
+    }
+}
+
+#section4 {
+    background-color: #E39B45;  // Orange background color
+    padding: 4rem 1.5rem;
+
+    .title-wrapper {
+        margin-bottom: 3rem;
+
+        .title, .subtitle {
+            color: white;
+        }
+    }
+
+    .info-card {
+        background-color: white;
+        border-radius: 8px;
+        padding: 2rem;
+        height: 100%;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .quote-mark {
+            font-size: 3rem;
+            color: #E39B45;
+            font-family: serif;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        blockquote {
+            font-size: 1.1rem;
+            color: #4a4a4a;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            border: none;
+            padding: 0;
+        }
+
+        .info-source {
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+
+            .source-logo {
+                width: 24px;
+                height: 24px;
+                margin-right: 0.75rem;
+            }
+
+            .source-name {
+                font-size: 0.9rem;
+                color: #666;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .column {
+            padding: 0.75rem;
+        }
+
+        .info-card {
+            padding: 1.5rem;
+
+            blockquote {
+                font-size: 1rem;
+            }
         }
     }
 }

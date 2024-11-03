@@ -6,10 +6,13 @@
 {{- $buttonLink := index $section3 "buttonlink" }}
 <section class="section section-feature-grey is-medium" id="section3">
   <div class="container">
-    <div class="columns">
-      <div class="column is-10 is-offset-1">
+    <div class="columns is-centered">
+      <div class="column is-12-mobile is-10-tablet is-10-desktop">
         <div class="has-text-centered">
-          <img class="pushed-image" src="{{ printf "images/%s" $image | relURL }}">
+          <img
+                  class="pushed-image"
+                  src="{{ printf "images/%s" $image | relURL }}"
+          alt="{{ $title }}" />
         </div>
       </div>
     </div>
@@ -19,10 +22,10 @@
       <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
     </div>
 
-    <p class="has-text-centered mt-20">
+    <div class="has-text-centered mt-20">
       <a class="button cta is-large rounded secondary-btn raised" href="{{ $buttonLink }}">
         {{ $buttonText }}
       </a>
-    </p>
+    </div>
   </div>
 </section>

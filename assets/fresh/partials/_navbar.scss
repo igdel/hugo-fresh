@@ -22,6 +22,9 @@ Navbar
     //Brand
     .navbar-brand {
         min-height: 4rem;
+        h3 {
+            color: $secondary;
+        }
         img {
             max-height: 36px !important;
             height: 36px;

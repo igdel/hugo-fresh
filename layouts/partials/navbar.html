@@ -9,6 +9,7 @@
       {{- if $navbarLogo}}
       <a class="navbar-item" href="{{ $navbarLogo.link }}">
         <img src="{{ printf "images/%s" $navbarLogo.image | relURL }}" alt="" width="{{ $navbarLogoWidth }}" height="{{ $navbarLogoHeight }}">
+        <h3 id="logo-text">Voluntarios DANA</h3>
       </a>
       {{- end}}
 
